@@ -1,0 +1,130 @@
+;
+;
+; Installs FGX WinUsb
+;
+
+[Version]
+Signature = "$Windows NT$"
+Class     = %ClassName%
+ClassGUID = {88BAE032-5A81-49f0-BC3D-A4FF138216D6}
+Provider  = %ManufacturerName%
+CatalogFile = WinUSBInstallation.cat
+DriverVer=09/04/2012,13.54.20.543
+
+[Manufacturer]
+%ManufacturerName%=FGX_WinUSB,NTx86,NTamd64,NTx86.6.0,NTamd64.6.0,NTx86.6.1,NTamd64.6.1
+
+[ClassInstall32]
+AddReg=FGX_WinUSB.AddClassReg
+
+[FGX_WinUSB.NTx86.6.1]
+%DeviceName% = USB_InstallWin7, USB\VID_0063&PID_0005
+
+[FGX_WinUSB.NTamd64.6.1]
+%DeviceName% = USB_InstallWin7, USB\VID_0063&PID_0005
+
+[FGX_WinUSB.NTx86.6.0]
+%DeviceName% = USB_InstallVista, USB\VID_0063&PID_0005
+
+[FGX_WinUSB.NTamd64.6.0]
+%DeviceName% = USB_InstallVista, USB\VID_0063&PID_0005
+
+[FGX_WinUSB.NTx86]
+%DeviceName% = USB_Install, USB\VID_0063&PID_0005
+
+[FGX_WinUSB.NTamd64]
+%DeviceName% = USB_Install, USB\VID_0063&PID_0005
+
+[FGX_WinUSB]
+%DeviceName% = USB_Install, USB\VID_0063&PID_0005
+
+[USB_Install]
+
+[USB_InstallVista]
+Include = winusb.inf
+Needs   = WINUSB.NT
+
+[USB_InstallWin7]
+Include = winusb.inf
+Needs   = WINUSB.NT
+
+[USB_Install.Services]
+AddService = WinUSB,0x00000002,WinUSB_ServiceInstall
+
+[USB_InstallVista.Services]
+Include	   = winusb.inf
+AddService = WinUSB,0x00000002,WinUSB_ServiceInstall
+
+[USB_InstallWin7.Services]
+Include = winusb.inf
+Needs   = WINUSB.NT.Services
+
+[WinUSB_ServiceInstall]
+DisplayName     = %WinUSB_SvcDesc%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WinUSB.sys
+
+[USB_Install.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+
+[USB_InstallVista.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+
+[WinUSB_Install]
+KmdfLibraryVersion=1.9
+
+[USB_Install.HW]
+AddReg=Dev_AddReg
+
+[USB_InstallVista.HW]
+AddReg=Dev_AddReg
+
+[USB_InstallWin7.HW]
+AddReg=Dev_AddReg
+
+[FGX_WinUSB.AddClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-20
+
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{658596FD-ACD8-418D-9469-57671864EF83}"
+
+[USB_Install.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[USB_InstallVista.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[USB_InstallWin7.CoInstallers]
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01009.dll,WdfCoInstaller","WinUSBCoInstaller2.dll"
+
+[CoInstallers_CopyFiles]
+WinUSBCoInstaller2.dll
+WdfCoInstaller01009.dll
+
+[DestinationDirs]
+CoInstallers_CopyFiles=11
+
+[SourceDisksNames]
+1=%DiskName%,,,
+
+[SourceDisksFiles.x86]
+WinUSBCoInstaller2.dll=1,x86
+WdfCoInstaller01009.dll=1,x86
+
+[SourceDisksFiles.amd64]
+WinUSBCoInstaller2.dll=1,amd64
+WdfCoInstaller01009.dll=1,amd64
+
+[Strings]
+ManufacturerName="M0nteCarl0"
+DeviceName="Open Comunication module"
+DiskName="Nx Installation Disk"
+ClassName="Universal Serial Bus devices"
+WinUSB_SvcDesc="WinUSB Driver"
