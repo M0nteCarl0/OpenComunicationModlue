@@ -17,8 +17,8 @@
    
 /****************************************************************************/
 uint8_t*                      OCM_Name             = "Open Comunication Module";
-uint8_t*                      OCM_Vendor_Name      = "TechNotarius";
-uint8_t*                      OCM_SerialNumber     = "19920306";
+uint8_t*                      OCM_Vendor_Name      = "M0nteCarl0";
+uint8_t*                      OCM_SerialNumber     = "663399";
 uint8_t*                      OCM_InterfaceName    = "Mixed Bus protocol";
 const  uint16_t               OCM_VID              = 0x63;//Индентификатор производителя
 const  uint16_t               OCM_PID               = 0x5; //Индентификатор устройства
