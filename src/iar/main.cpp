@@ -16,6 +16,6 @@ int main()
   }
    
   
- // iWD_Init();
+  iWD_Init();
   USB_StreamExample_ComunicationSeunence();//Основной цикл обработки принятых данныъх
 }
