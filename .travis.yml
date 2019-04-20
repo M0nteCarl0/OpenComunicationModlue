@@ -13,7 +13,7 @@ install: |
   
   # USB&Std Libraries 
   USB_LIB_FILE="en.stm32_f105-07_f2_f4_usb-host-device_lib.zip"
-  wget -O "$USB_LIB_FILE" "https://my.st.com/content/ccc/resource/technical/software/firmware/44/b1/92/be/d3/26/4e/df/stm32_f105-07_f2_f4_usb-host-device_lib.zip/files/stm32_f105-07_f2_f4_usb-host-device_lib.zip/jcr:content/translations/en.stm32_f105-07_f2_f4_usb-host-device_lib.zip" &&
+  wget -O "$USB_LIB_FILE" "https://www.st.com/content/ccc/resource/technical/software/firmware/44/b1/92/be/d3/26/4e/df/stm32_f105-07_f2_f4_usb-host-device_lib.zip/files/stm32_f105-07_f2_f4_usb-host-device_lib.zip/jcr:content/translations/en.stm32_f105-07_f2_f4_usb-host-device_lib.zip" &&
   unzip "$USB_LIB_FILE" -d libs &&
   rm "$USB_LIB_FILE"
 
