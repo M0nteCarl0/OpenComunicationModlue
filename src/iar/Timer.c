@@ -31,7 +31,17 @@ void Timer_WaitLoop(void)
 /***************************************************************************/
  void Timer_PrepareWaitTimer(uint16_t Time)
  {
-   TIM_SetAutoreload(TIM2,Time);
+   if(Time > 1)
+   {
+      TIM_SetCounter(TIM2,0);
+      TIM_SetAutoreload(TIM2,Time);
+   }
+   else
+   {
+     TIM_SetCounter(TIM2,1);
+     TIM_SetAutoreload(TIM2,2); 
+   }
+   
    TIM_ClearITPendingBit(TIM2,TIM_IT_Update);
    TIM_ITConfig(TIM2,TIM_IT_Update,ENABLE);
    NVIC_EnableIRQ(TIM2_IRQn);
@@ -40,14 +50,14 @@ void Timer_WaitLoop(void)
 /***************************************************************************/
  void Timer_WaitMilisec(uint16_t Time)
  {
-   Timer_SetPrescalar(42000);
+   TIM_PrescalerConfig(TIM2,42000,TIM_PSCReloadMode_Immediate);
    Timer_PrepareWaitTimer(Time);
    Timer_WaitLoop();
  } 
 /***************************************************************************/
   void Timer_WaitMicrosec(uint16_t Time)
   {
-   Timer_SetPrescalar(42);
+   TIM_PrescalerConfig(TIM2,42,TIM_PSCReloadMode_Immediate);
    Timer_PrepareWaitTimer(Time);
    Timer_WaitLoop(); 
   }

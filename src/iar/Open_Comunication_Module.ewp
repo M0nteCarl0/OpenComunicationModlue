@@ -1857,22 +1857,7 @@
     </file>
   </group>
   <group>
-    <name>CS43L22_F2</name>
-    <file>
-      <name>$PROJ_DIR$\CS43L22_F2.c</name>
-    </file>
-  </group>
-  <group>
     <name>DDC</name>
-    <file>
-      <name>$PROJ_DIR$\ALTERA_Control.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\DDC12.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\DDC12_Core.c</name>
-    </file>
   </group>
   <group>
     <name>Flash</name>
