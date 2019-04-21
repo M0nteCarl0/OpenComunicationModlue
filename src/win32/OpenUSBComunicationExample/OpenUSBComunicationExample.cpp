@@ -7,6 +7,7 @@
 #include "Open_Comunication_module.h"
 #include "USB_Comands.h"
 #include  <iostream>
+
 Open_Comunication_module MyDev;
 void BulkCommadConsole(void)
 {
@@ -50,15 +51,15 @@ Begin:
                 break;
             }
             case 5: {
-				Comnds._Dev.Close();
-                exit(0);
+                Comnds._Dev.Close();
+			    exit(0);
             };
         }
 	}
 	else
 	{
-		cout << "Device not found\n";
-		getchar();
+	    cout << "Device not found\n";
+	    getchar();
 	}
 
 }
