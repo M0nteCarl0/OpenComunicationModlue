@@ -52,7 +52,7 @@ Begin:
             }
             case 5: {
                 Comnds._Dev.Close();
-			    exit(0);
+		exit(0);
             };
         }
 	}
