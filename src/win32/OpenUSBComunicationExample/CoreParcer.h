@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _CPARCER_
+#define _CPARCER_
 #include "ParcerBaseTokenActionProvider.h"
 #include <string>
 class CoreParcer
@@ -25,4 +26,4 @@ public:
    string ParcebleData;
    int      _Argc;
 };
-
+#endif

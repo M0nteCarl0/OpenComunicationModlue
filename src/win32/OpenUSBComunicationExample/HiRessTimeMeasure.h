@@ -1,4 +1,3 @@
-#pragma once
 #include <Windows.h>
 #ifndef _HRTM_
 #define _HRTM_
@@ -19,8 +18,6 @@ public:
     DWORD64 GetEllapsedCPUCycles(void);
 	unsigned long long GetTotalCountHandles(void);
     DWORD GetCPUFrequncyOnFly(void);
-
-
 private:
 	double rdtscimeNsPerCycle; 
 	double rdtscFrequencyMhz;

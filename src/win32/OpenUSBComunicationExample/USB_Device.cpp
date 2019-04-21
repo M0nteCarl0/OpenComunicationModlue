@@ -1,62 +1,49 @@
 #include "USB_Device.h"
 
-/***********************************************************************************/
 USB_Device::USB_Device(void)
 {
 	m_hFile = NULL;
 	m_hIface = NULL;
 }
-/***********************************************************************************/
+
 USB_Device:: USB_Device (GUID& GUIDDevice)
 {
 	m_hFile = NULL;
 	m_hIface = NULL;
 	SetGUID(GUIDDevice);
 }
-/***********************************************************************************/
+
 USB_Device::~USB_Device(void)
 {
 	Close();
 }
-/***********************************************************************************/
+
    void USB_Device:: SetGUID(GUID& GUIDDevice)
 {
-
 	_DeviceUniqeID = GUIDDevice;
-
 }
-/***********************************************************************************/
+
 GUID USB_Device:: GetGUID(void)
 {
-
     return _DeviceUniqeID;
-
 }
-/***********************************************************************************/
+
 bool USB_Device::DeviceFound(void)
 {
-
-	
-
-
 	return 0;
 }
-/***********************************************************************************/
+
 int USB_Device:: GetCountFoundedDevices(void)
 {
-
-
 	return 0;
 }
-/***********************************************************************************/
+
 void  USB_Device:: EnumerateDevices(void)
 {
 
 
-
-
 }
-/***********************************************************************************/
+
 bool USB_Device:: Open(void)
 {
 	DeviceInfoSet	 DevInfo;
@@ -65,7 +52,6 @@ bool USB_Device:: Open(void)
 	{
 	return true;
 	}
-
 
 	if (ERROR_SUCCESS == DevInfo.Create (&_DeviceUniqeID))
     {
@@ -104,9 +90,6 @@ lCreate :
 		return (Close (), false);
 	}
 		return true;
-
-
-
 }
 /***********************************************************************************/
 void USB_Device:: Close(void)
@@ -166,7 +149,7 @@ USB_INTERFACE_DESCRIPTOR USB_Device:: GetInterfaceDescriptor(uint8_t IntefaceID)
 	 unsigned long Btr;
 	 uint8_t Temp[64];
 	 memset(Temp,0,64);
-	 uint8_t Iman =  GetDeviceDescriptor().iManufacturer;
+	 uint8_t Iman = GetDeviceDescriptor().iManufacturer;
 	 uint16_t LangID = GetLangIDDescriptor().wLANGID;
 	 WinUsb_GetDescriptor(m_hIface,USB_STRING_DESCRIPTOR_TYPE,Iman,LangID ,Temp,64,&Btr);
 	 return  GetGenerateStringFromUnicodeByteArray(Temp,Btr);
@@ -177,16 +160,14 @@ string USB_Device::GetDeviceName(void)
      unsigned long Btr;
 	 uint8_t Temp[64];
 	 memset(Temp,0,64);
-	 uint8_t Iman =  GetDeviceDescriptor().iProduct;
+	 uint8_t Iman = GetDeviceDescriptor().iProduct;
 	 uint16_t LangID = GetLangIDDescriptor().wLANGID;
 	 WinUsb_GetDescriptor(m_hIface,USB_STRING_DESCRIPTOR_TYPE,Iman,LangID ,Temp,64,&Btr);
-
-  return  GetGenerateStringFromUnicodeByteArray(Temp,Btr);
+	return  GetGenerateStringFromUnicodeByteArray(Temp,Btr);
 }
 /***********************************************************************************/
 string USB_Device::GetSerialNumber(void)
 {
-  
   unsigned long Btr;
   uint8_t Temp[64];
   memset(Temp,0,64);
@@ -204,15 +185,12 @@ string  USB_Device::GetGenerateStringFromUnicodeByteArray(uint8_t* InputArray,ui
 	uint16_t UnicodeConbter  = 0;
 	for(uint16_t i = 2;i<BufferSize;i++)
 	{
-
 		if(InputArray[i]!=0x0)
 		{
 			UnicodeData[UnicodeConbter++] = InputArray[i]; 
 			if(i == (BufferSize-1))
 			{
-			UnicodeData[UnicodeConbter] = '/0';
-
-
+				UnicodeData[UnicodeConbter] = '/0';
 			}
 		}
 	}
@@ -227,97 +205,67 @@ string  USB_Device::GetGenerateStringFromUnicodeByteArray(uint8_t* InputArray,ui
 	bool Res = false;
 	ULONG DT = 0;
 	Res = WinUsb_ControlTransfer(m_hIface,Setup,pBuf,dBufSize,&DT,NULL);
-	 if(DT == dBufSize && Res )
- {
-
-	 return true;
-
- }
- else
- {
-
-	 return false;
-
- }
-
-
+	if(DT == dBufSize && Res )
+	{
+		 return true;
+	}
+	else
+	{
+		 return false;
+	}
 
  }
 /***********************************************************************************/
  bool  USB_Device:: TransferInterfaceDeviceEP(uint8_t uEndPoint, uint8_t* pBuf, LONG dBufSize,ULONG TimeOutMs)
  {
 
-  OVERLAPPED * o = NULL;
-  DWORD dResult; DWORD dTransfered = 0;
-	
+	OVERLAPPED * o = NULL;
+	DWORD dResult; DWORD dTransfered = 0;
 	bool Flag = true;
-	WinUsb_SetPipePolicy(m_hIface,uEndPoint,PIPE_TRANSFER_TIMEOUT,sizeof(ULONG),&TimeOutMs);
-	
-	
-	
+	WinUsb_SetPipePolicy(m_hIface, uEndPoint, PIPE_TRANSFER_TIMEOUT, sizeof(ULONG), &TimeOutMs);
 	if (uEndPoint & 0x80)
 	{
 	 	WinUsb_SetPipePolicy(m_hIface,uEndPoint,IGNORE_SHORT_PACKETS,sizeof(bool),&Flag);
 		dResult = WinUsb_ReadPipe  (m_hIface, uEndPoint, pBuf, dBufSize, & dTransfered, o) 
-
 				  ? ERROR_SUCCESS : ::GetLastError ();
 	}
 	else
 	{
 		WinUsb_SetPipePolicy(m_hIface,uEndPoint,SHORT_PACKET_TERMINATE,sizeof(bool),&Flag);
         WinUsb_SetPipePolicy(m_hIface,uEndPoint,AUTO_CLEAR_STALL,sizeof(bool),&Flag);
-        
 		dResult = WinUsb_WritePipe (m_hIface, uEndPoint, pBuf, dBufSize, & dTransfered, o)
-
 				  ? ERROR_SUCCESS : ::GetLastError ();
 	}
 	WinUsb_FlushPipe(m_hIface,uEndPoint);
 	return ((ERROR_SUCCESS    == dResult)
 		 || (ERROR_IO_PENDING == dResult)) ? true : false;
-
  }
- /***********************************************************************************/
- #if 0
-  USB_TraceTransaction  USB_Device:: ControlEP0DataTransferEx(WINUSB_SETUP_PACKET &Setup,uint8_t* pBuf,LONG dBufSize)
-  {
-
-
-  return  USB_TraceTransaction();
-  }
-  /***********************************************************************************/
-  USB_TraceTransaction  USB_Device:: TransferInterfaceDeviceEPEx(uint8_t uEndPoint, uint8_t* pBuf, LONG dBufSize,ULONG TimeOutMs)
-  {
-
-
-    return  USB_TraceTransaction();
-  }
-#endif
-/***********************************************************************************/
+ 
  void USB_Device:: SetFile(HANDLE Source)
  {
      m_hFile =  Source;
  }
- /***********************************************************************************/
+ 
  HANDLE USB_Device:: GetFile(void)
  {
    return m_hFile;
  }
-/***********************************************************************************/
+
  void USB_Device:: SetInterface(PVOID Source)
  {
     m_hIface = Source;
  }
- /***********************************************************************************/
+ 
  PVOID USB_Device::  GetIntreface(void)
  {
- return m_hIface;
+	return m_hIface;
  }
- /***********************************************************************************/
+ 
  USB_Device USB_Device::  operator=(USB_Device& Source)
  {
- this->SetGUID(Source.GetGUID());
- this->SetFile(Source.GetFile());
- this->SetInterface(Source.GetIntreface());
- return *this;
+	this->SetGUID(Source.GetGUID());
+	this->SetFile(Source.GetFile());
+	this->SetInterface(Source.GetIntreface());
+	return *this;
  }
- /***********************************************************************************/
+ 

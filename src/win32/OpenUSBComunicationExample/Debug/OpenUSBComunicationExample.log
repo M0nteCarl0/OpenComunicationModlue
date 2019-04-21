@@ -1,4 +1,4 @@
-﻿Сборка начата 14.04.2019 20:53:21.
+﻿Сборка начата 21.04.2019 12:58:57.
      1>Проект "D:\GitHubAndGitlab\OpenComunicationModule\src\win32\OpenUSBComunicationExample\OpenUSBComunicationExample.vcxproj" в узле 2 (целевые объекты Build).
      1>InitializeBuildStatus:
          Создание "Debug\OpenUSBComunicationExample.unsuccessfulbuild", так как было задано "AlwaysCreate".
@@ -10,10 +10,17 @@
          OpenUSBComunicationExample.cpp
          Open_Comunication_module.cpp
          ParcerBaseTokenActionProvider.cpp
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(21): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(23): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(24): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(25): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(26): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(47): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(55): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
          stdafx.cpp
          USB_Comands.cpp
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\hiresstimemeasure.cpp(88): warning C4244: инициализация: преобразование "DWORD64" в "double", возможна потеря данных
          USB_Device.cpp
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\hiresstimemeasure.cpp(99): warning C4244: инициализация: преобразование "DWORD64" в "double", возможна потеря данных
      1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\parcerbasetokenactionprovider.cpp(59): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
      1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\parcerbasetokenactionprovider.cpp(99): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
      1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\parcerbasetokenactionprovider.cpp(135): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
@@ -24,21 +31,14 @@
      1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\parcerbasetokenactionprovider.cpp(164): warning C4244: аргумент: преобразование "uint64_t" в "size_t", возможна потеря данных
      1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\parcerbasetokenactionprovider.cpp(165): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
      1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\parcerbasetokenactionprovider.cpp(169): warning C4244: аргумент: преобразование "uint64_t" в "size_t", возможна потеря данных
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(23): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(25): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(26): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(27): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(28): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(49): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\coreparcer.cpp(57): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
      1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\parcerbasetokenactionprovider.cpp(181): warning C4715: ParcerBaseTokenActionProvider::GetNexttArgz: значение возвращается не при всех путях выполнения
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(172): warning C4244: аргумент: преобразование "unsigned long" в "uint16_t", возможна потеря данных
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(184): warning C4244: аргумент: преобразование "unsigned long" в "uint16_t", возможна потеря данных
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(196): warning C4244: аргумент: преобразование "unsigned long" в "uint16_t", возможна потеря данных
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(213): warning C4305: =: усечение из "int" к "char"
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(213): warning C4309: =: усечение константного значения
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(229): warning C4800: BOOL: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
-     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_comands.cpp(47): warning C4101: Ovl: неиспользованная локальная переменная
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(155): warning C4244: аргумент: преобразование "unsigned long" в "uint16_t", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(166): warning C4244: аргумент: преобразование "unsigned long" в "uint16_t", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(177): warning C4244: аргумент: преобразование "unsigned long" в "uint16_t", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(193): warning C4305: =: усечение из "int" к "char"
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(193): warning C4309: =: усечение константного значения
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_device.cpp(207): warning C4800: BOOL: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\openusbcomunicationexample\usb_comands.cpp(40): warning C4101: Ovl: неиспользованная локальная переменная
        ManifestResourceCompile:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\OpenUSBComunicationExample.exe.embed.manifest.res" Debug\OpenUSBComunicationExample_manifest.rc 
        Link:
@@ -54,9 +54,18 @@
          Debug\USB_Device.obj
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\OpenUSBComunicationExample.exe.embed.manifest" /manifest Debug\OpenUSBComunicationExample.exe.intermediate.manifest
-         Для всех выходных данных обновления не требуется.
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\OpenUSBComunicationExample.exe.embed.manifest.res" Debug\OpenUSBComunicationExample_manifest.rc 
        LinkEmbedManifest:
-         Для всех выходных данных обновления не требуется.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitHubAndGitlab\OpenComunicationModule\src\win32\Debug\OpenUSBComunicationExample.exe" /INCREMENTAL /NOLOGO Setupapi.lib winusb.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\OpenUSBComunicationExample.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\GitHubAndGitlab\OpenComunicationModule\src\win32\Debug\OpenUSBComunicationExample.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GitHubAndGitlab\OpenComunicationModule\src\win32\Debug\OpenUSBComunicationExample.lib" /MACHINE:X86 Debug\OpenUSBComunicationExample.exe.embed.manifest.res
+         Debug\CoreParcer.obj
+         Debug\DeviceInfoSet.obj
+         Debug\HiRessTimeMeasure.obj
+         Debug\OpenUSBComunicationExample.obj
+         Debug\Open_Comunication_module.obj
+         Debug\ParcerBaseTokenActionProvider.obj
+         Debug\stdafx.obj
+         Debug\USB_Comands.obj
+         Debug\USB_Device.obj
          OpenUSBComunicationExample.vcxproj -> D:\GitHubAndGitlab\OpenComunicationModule\src\win32\Debug\OpenUSBComunicationExample.exe
        FinalizeBuildStatus:
          Файл "Debug\OpenUSBComunicationExample.unsuccessfulbuild" удаляется.
@@ -65,4 +74,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:04.86
+Затраченное время: 00:00:02.99
