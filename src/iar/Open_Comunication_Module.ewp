@@ -1857,9 +1857,6 @@
     </file>
   </group>
   <group>
-    <name>DDC</name>
-  </group>
-  <group>
     <name>Flash</name>
     <file>
       <name>$PROJ_DIR$\FlashExtended.cpp</name>

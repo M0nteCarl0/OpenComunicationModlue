@@ -5,12 +5,12 @@ void Conversion::WordToByte(uint16_t &Source,uint8_t &Dest1, uint8_t &Dest2)
 	Dest1 = Source & 0xFF;
 	Dest2 = Source >> 8;	
 };
-/***************************************************************************/
+
 void Conversion::ByteToWord(uint16_t &Source,uint8_t &Dest1, uint8_t &Dest2)
 {
 	Source = Dest1 | (Dest2 << 8);
 };
-/***************************************************************************/
+
 
 void Conversion::DWordToByte(uint32_t &Source,uint8_t &Dest1, uint8_t &Dest2,uint8_t& Dest3,uint8_t& Dest4)
 {
@@ -19,7 +19,7 @@ void Conversion::DWordToByte(uint32_t &Source,uint8_t &Dest1, uint8_t &Dest2,uin
    Conversion::WordToByte(Word1,Dest1,Dest2);
    Conversion::WordToByte(Word2,Dest3,Dest4);
 };
-/***************************************************************************/
+
 void  Conversion::ByteToDWord(uint32_t &Source,uint8_t &Dest1, uint8_t &Dest2,uint8_t& Dest3,uint8_t& Dest4)
 {
 	uint16_t Word1 = 0;
@@ -28,7 +28,7 @@ void  Conversion::ByteToDWord(uint32_t &Source,uint8_t &Dest1, uint8_t &Dest2,ui
    Conversion::ByteToWord(Word2,Dest3,Dest4);
 	Source = Word1 | (Word2 << 16);
 };
-/***************************************************************************/
+
 void  Conversion::QWordToByte(uint64_t &Source,uint8_t &Dest1, uint8_t &Dest2,uint8_t& Dest3,uint8_t& Dest4, uint8_t &Dest5, uint8_t &Dest6,uint8_t& Dest7,uint8_t& Dest8)
 {
 	uint32_t Dword1 = Source  &  0xffffffff ;
@@ -37,30 +37,19 @@ void  Conversion::QWordToByte(uint64_t &Source,uint8_t &Dest1, uint8_t &Dest2,ui
    Conversion::DWordToByte(Dword2,Dest5,Dest6,Dest7,Dest8);
 
 };
-/***************************************************************************/
-/*
-void Conversion::ByteToQWord(uint64_t &Source,uint8_t &Dest1, uint8_t &Dest2,uint8_t& Dest3,uint8_t& Dest4, uint8_t &Dest5, uint8_t &Dest6,uint8_t& Dest7,uint8_t& Dest8)
-{
-	uint32_t Dword1 = 0;
-	uint32_t Dword2 = 0;
-   Conversion::ByteToDWord(Dword1,Dest1,Dest2,Dest3,Dest4);
-   Conversion::ByteToDWord(Dword2,Dest5,Dest6,Dest7,Dest8);
-	Source = Dword1 | (Dword2 << 32);
-};
-*/
-/***************************************************************************/
+
 void Conversion::ByteTo7Bit(uint8_t &Source,uint8_t &Dest1,uint8_t &Dest2)
 {
 	Dest1 = Source & 0x7F;
 	Dest2 = (Source >> 7);
 
 };
-/***************************************************************************/
+
 void Conversion::Bit7ToByte(uint8_t &Source,uint8_t &Dest1,uint8_t &Dest2)
 {
 	Source = Dest1 & 0x7F |(Dest2 << 7);
 };
-/***************************************************************************/
+
 void  Conversion::WordTo7Bit(uint16_t &Source,uint8_t &Dest1,uint8_t &Dest2,uint8_t &Dest3,uint8_t &Dest4)
 {
 	uint8_t D3[2];
@@ -68,7 +57,7 @@ void  Conversion::WordTo7Bit(uint16_t &Source,uint8_t &Dest1,uint8_t &Dest2,uint
    Conversion::ByteTo7Bit(D3[0],Dest1,Dest2);
    Conversion::ByteTo7Bit(D3[1],Dest3,Dest4);
 };
-/***************************************************************************/
+
 void Conversion::Bit7ToWord(uint16_t &Source,uint8_t &Dest1,uint8_t &Dest2,uint8_t &Dest3,uint8_t &Dest4)
 {
 	uint8_t D3[2];
@@ -77,7 +66,7 @@ void Conversion::Bit7ToWord(uint16_t &Source,uint8_t &Dest1,uint8_t &Dest2,uint8
    Conversion::ByteToWord(Source,D3[0],D3[1]);
 
 };
-/***************************************************************************/
+
 void Conversion:: DWordTo7Bit(uint32_t &Source,uint8_t &Dest1, uint8_t &Dest2,uint8_t& Dest3,uint8_t& Dest4,uint8_t &Dest5, uint8_t &Dest6,uint8_t& Dest7,uint8_t& Dest8)
 {
 
@@ -89,7 +78,7 @@ void Conversion:: DWordTo7Bit(uint32_t &Source,uint8_t &Dest1, uint8_t &Dest2,ui
    Conversion::ByteTo7Bit(D3[3],Dest7,Dest8);
 
 }
-/***************************************************************************/
+
 void Conversion:: Bit7ToDWord(uint32_t &Source,uint8_t &Dest1, uint8_t &Dest2,uint8_t& Dest3,uint8_t& Dest4,uint8_t &Dest5, uint8_t &Dest6,uint8_t& Dest7,uint8_t& Dest8)
 {
 	uint8_t D3[4];
@@ -99,31 +88,20 @@ void Conversion:: Bit7ToDWord(uint32_t &Source,uint8_t &Dest1, uint8_t &Dest2,ui
    Conversion::Bit7ToByte(D3[3],Dest6,Dest7);
    Conversion::ByteToDWord(Source,D3[0],D3[1],D3[2],D3[3]);
 };
-/***************************************************************************/
+
  void Conversion::Signed8BitToUnsigned7bitFormat(int8_t& Source,uint8_t& Dest1,uint8_t& Dest2)
  {
 	Dest1 =  Source & 0x7f;
 	Dest2 = (Source & 0x80) >>7;
  }
- /***************************************************************************/
+ 
  void Conversion::Unsigned7bitFormaTotSigned8Bit(int8_t& Destinatation,uint8_t& Source1,uint8_t& Source2)
  {
 	 Destinatation =  Source1 | Source2<<7;
  }
- /***************************************************************************/
+ 
  void Conversion::Signed16BitToUnsigned7bitFormat(int16_t& Source,uint8_t& Dest1,uint8_t& Dest2,uint8_t& Dest3 )
  {
-	 /*
-	 Input = 1111 1111 1111 1111
-	 Dest1 = 0111 1111 ->  Input & 0x7f(0111 1111);
-	 Dest2 = 0111 111
-	 Dest3 = 11
-
-
-
-
-	 */
-
 	 Dest1 = Source & 0xFF;
 	 Dest2 = (Source>>8) & 0xFF;
 
@@ -236,7 +214,7 @@ void Conversion:: Bit7ToDWord(uint32_t &Source,uint8_t &Dest1, uint8_t &Dest2,ui
 
    }
 
-   /***************************************************************************/
+   
    void Conversion::Signed64BitToUnsigned7bitFormat(int64_t& Source,uint8_t& Dest1,uint8_t& Dest2,uint8_t& Dest3,uint8_t& Dest4,uint8_t& Dest5,
    uint8_t& Dest6,uint8_t& Dest7,uint8_t& Dest8,uint8_t& Dest9,uint8_t& Dest10 )
    {
