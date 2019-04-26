@@ -25,12 +25,12 @@ public:
 	bool DeviceFound(void);
 	int GetCountFoundedDevices(void);
 	USB_DEVICE_DESCRIPTOR GetDeviceDescriptor(void);
-	WINUSB_PIPE_INFORMATION GetEndpointDescriptor(uint8_t ID,uint8_t InterfaceID = 0);
+	WINUSB_PIPE_INFORMATION GetEndpointDescriptor(uint8_t ID , uint8_t InterfaceID = 0);
 	USB_CONFIGURATION_DESCRIPTOR GetConfigurationDescriptor(uint8_t ConfigID = 0);
 	USB_INTERFACE_DESCRIPTOR GetInterfaceDescriptor(uint8_t IntefaceID = 0);
 	USB_LangIDDescriptor GetLangIDDescriptor(void);
-	bool  ControlEP0DataTransfer(WINUSB_SETUP_PACKET &Setup,uint8_t* pBuf,LONG dBufSize);
-	bool TransferInterfaceDeviceEP(uint8_t uEndPoint, uint8_t* pBuf, LONG dBufSize,ULONG TimeOutMs);
+	bool  ControlEP0DataTransfer(WINUSB_SETUP_PACKET &Setup , uint8_t* pBuf , LONG dBufSize);
+	bool TransferInterfaceDeviceEP(uint8_t uEndPoint , uint8_t* pBuf , LONG dBufSize , ULONG TimeOutMs);
 	string GetManufacureName(void);
 	string GetDeviceName(void);
 	string GetSerialNumber(void);
@@ -41,10 +41,10 @@ public:
     USB_Device operator=(USB_Device& Source);
 private:
     void SetFile(HANDLE Source);
+	void SetInterface(PVOID Source);
     HANDLE GetFile(void);
-    void SetInterface(PVOID Source);
 	GUID		  _DeviceUniqeID;
-	string GetGenerateStringFromUnicodeByteArray(UCHAR* InputArray,uint16_t BufferSize);
+	string GetGenerateStringFromUnicodeByteArray(UCHAR* InputArray , uint16_t BufferSize);
 	HANDLE			m_hFile	;
 	PVOID			m_hIface;
 	HiRessTimeMeasure TimeOperation;

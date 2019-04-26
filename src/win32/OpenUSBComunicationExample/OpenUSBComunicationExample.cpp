@@ -1,13 +1,9 @@
-// OpenUSBComunicationExample.cpp: определяет точку входа для консольного приложения.
-//
-
 #include "stdafx.h"
 #include "DeviceInfoSet.h"
 #include "USB_Device.h"
 #include "Open_Comunication_module.h"
 #include "USB_Comands.h"
 #include  <iostream>
-
 Open_Comunication_module MyDev;
 void BulkCommadConsole(void)
 {
@@ -52,7 +48,7 @@ Begin:
             }
             case 5: {
                 Comnds._Dev.Close();
-		exit(0);
+                exit(0);
             };
         }
 	}

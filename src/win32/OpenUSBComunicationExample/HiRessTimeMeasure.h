@@ -21,6 +21,7 @@ public:
 private:
 	double rdtscimeNsPerCycle; 
 	double rdtscFrequencyMhz;
+	 double TickInterval;
 	LARGE_INTEGER _Begin;
 	LARGE_INTEGER _End;
 	LARGE_INTEGER _Total;
@@ -32,7 +33,7 @@ private:
 	DOUBLE _Sec;
 	DOUBLE _Milisec;
 	DOUBLE _Microsec;
-    double TickInterval;
+  
 	unsigned long long TimerID;
 };
 #endif
