@@ -30,7 +30,7 @@ void Clock_HSE_Init(void) // 2-nd Stage
   PLLM = 336
   PLLP = 2
   PLLQ = 8
-  
+  
   FVCO = finput * (PLLN/PLLM) = 8 * (336/8) ->336
   FPLL = FVCO/PLLP = 336/2 ->168
   FUSB = FVCO/PLLQ = 336/7 ->48
@@ -42,7 +42,6 @@ void Clock_HSE_Init(void) // 2-nd Stage
   RCC_PLLCmd(ENABLE);
   while (RCC_GetFlagStatus(RCC_FLAG_PLLRDY) != SET) {
   };
-
   RCC_HCLKConfig(RCC_SYSCLK_Div1); // 168 mhz AHB(OTG HS,ETH,DMA,CRC,GPIOx)
   RCC_PCLK1Config(RCC_HCLK_Div8);  // 21 mhz APB1(DAC,PWR,I2Cx,SPIx)
   RCC_PCLK2Config(RCC_HCLK_Div4);  // 42 mhz APB2

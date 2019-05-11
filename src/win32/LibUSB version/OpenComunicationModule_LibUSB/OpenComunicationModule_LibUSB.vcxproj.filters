@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы\USB_Lib">
+      <UniqueIdentifier>{88145eee-5bcc-4fc9-bf32-0f05e38317f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\USB_Lib">
+      <UniqueIdentifier>{4e2829f7-bc92-4dbe-a9f3-ce4b76eb841e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Universal Comunication Framework">
+      <UniqueIdentifier>{644b428c-b3fe-4263-9932-f279bf66bc25}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceInfoSet.h">
+      <Filter>Заголовочные файлы\USB_Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Open_Comunication_module.h">
+      <Filter>Заголовочные файлы\USB_Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="USB_Comands.h">
+      <Filter>Заголовочные файлы\USB_Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="USB_Device.h">
+      <Filter>Заголовочные файлы\USB_Lib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenComunicationModule_LibUSB.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceInfoSet.cpp">
+      <Filter>Файлы исходного кода\USB_Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="USB_Comands.cpp">
+      <Filter>Файлы исходного кода\USB_Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="USB_Device.cpp">
+      <Filter>Файлы исходного кода\USB_Lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

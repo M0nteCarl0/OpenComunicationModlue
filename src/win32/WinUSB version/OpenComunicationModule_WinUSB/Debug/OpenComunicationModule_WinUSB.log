@@ -1,0 +1,77 @@
+﻿Построение начато 28.04.2019 11:02:42.
+     1>Проект "D:\GitHubAndGitlab\OpenComunicationModule\src\win32\WinUSB version\OpenComunicationModule_WinUSB\OpenComunicationModule_WinUSB.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Debug\OpenComunicationModule_WinUSB.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CoreParcer.cpp DeviceInfoSet.cpp HiRessTimeMeasure.cpp OpenComunicationModule_WinUSB.cpp Open_Comunication_module.cpp ParcerBaseTokenActionProvider.cpp stdafx.cpp USB_Comands.cpp USB_Device.cpp
+         CoreParcer.cpp
+         DeviceInfoSet.cpp
+         HiRessTimeMeasure.cpp
+         OpenComunicationModule_WinUSB.cpp
+         Open_Comunication_module.cpp
+         ParcerBaseTokenActionProvider.cpp
+         stdafx.cpp
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\coreparcer.cpp(21): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\coreparcer.cpp(23): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\coreparcer.cpp(24): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\coreparcer.cpp(25): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\coreparcer.cpp(26): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\coreparcer.cpp(47): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\coreparcer.cpp(55): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+         USB_Comands.cpp
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\hiresstimemeasure.cpp(83): warning C4244: инициализация: преобразование "DWORD64" в "double", возможна потеря данных
+         USB_Device.cpp
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(59): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(99): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(135): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(138): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(152): warning C4244: инициализация: преобразование "uint64_t" в "uint16_t", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(158): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(161): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(164): warning C4244: аргумент: преобразование "uint64_t" в "size_t", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(165): warning C4244: аргумент: преобразование "uint64_t" в "unsigned int", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(169): warning C4244: аргумент: преобразование "uint64_t" в "size_t", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\parcerbasetokenactionprovider.cpp(181): warning C4715: ParcerBaseTokenActionProvider::GetNexttArgz: значение возвращается не при всех путях выполнения
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\usb_comands.cpp(39): warning C4101: Ovl: неиспользованная локальная переменная
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\usb_device.cpp(137): warning C4244: аргумент: преобразование "unsigned long" в "uint16_t", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\usb_device.cpp(148): warning C4244: аргумент: преобразование "unsigned long" в "uint16_t", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\usb_device.cpp(159): warning C4244: аргумент: преобразование "unsigned long" в "uint16_t", возможна потеря данных
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\usb_device.cpp(172): warning C4305: =: усечение из "int" к "char"
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\usb_device.cpp(172): warning C4309: =: усечение константного значения
+     1>d:\githubandgitlab\opencomunicationmodule\src\win32\winusb version\opencomunicationmodule_winusb\usb_device.cpp(185): warning C4800: BOOL: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\OpenComunicationModule_WinUSB.exe.embed.manifest.res" Debug\OpenComunicationModule_WinUSB_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitHubAndGitlab\OpenComunicationModule\src\win32\WinUSB version\Debug\OpenComunicationModule_WinUSB.exe" /INCREMENTAL /NOLOGO Setupapi.lib winusb.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\OpenComunicationModule_WinUSB.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\GitHubAndGitlab\OpenComunicationModule\src\win32\WinUSB version\Debug\OpenComunicationModule_WinUSB.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GitHubAndGitlab\OpenComunicationModule\src\win32\WinUSB version\Debug\OpenComunicationModule_WinUSB.lib" /MACHINE:X86 Debug\OpenComunicationModule_WinUSB.exe.embed.manifest.res
+         Debug\CoreParcer.obj
+         Debug\DeviceInfoSet.obj
+         Debug\HiRessTimeMeasure.obj
+         Debug\OpenComunicationModule_WinUSB.obj
+         Debug\Open_Comunication_module.obj
+         Debug\ParcerBaseTokenActionProvider.obj
+         Debug\stdafx.obj
+         Debug\USB_Comands.obj
+         Debug\USB_Device.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\OpenComunicationModule_WinUSB.exe.embed.manifest" /manifest Debug\OpenComunicationModule_WinUSB.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\OpenComunicationModule_WinUSB.exe.embed.manifest.res" Debug\OpenComunicationModule_WinUSB_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitHubAndGitlab\OpenComunicationModule\src\win32\WinUSB version\Debug\OpenComunicationModule_WinUSB.exe" /INCREMENTAL /NOLOGO Setupapi.lib winusb.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\OpenComunicationModule_WinUSB.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\GitHubAndGitlab\OpenComunicationModule\src\win32\WinUSB version\Debug\OpenComunicationModule_WinUSB.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GitHubAndGitlab\OpenComunicationModule\src\win32\WinUSB version\Debug\OpenComunicationModule_WinUSB.lib" /MACHINE:X86 Debug\OpenComunicationModule_WinUSB.exe.embed.manifest.res
+         Debug\CoreParcer.obj
+         Debug\DeviceInfoSet.obj
+         Debug\HiRessTimeMeasure.obj
+         Debug\OpenComunicationModule_WinUSB.obj
+         Debug\Open_Comunication_module.obj
+         Debug\ParcerBaseTokenActionProvider.obj
+         Debug\stdafx.obj
+         Debug\USB_Comands.obj
+         Debug\USB_Device.obj
+         OpenComunicationModule_WinUSB.vcxproj -> D:\GitHubAndGitlab\OpenComunicationModule\src\win32\WinUSB version\Debug\OpenComunicationModule_WinUSB.exe
+       FinalizeBuildStatus:
+         Файл "Debug\OpenComunicationModule_WinUSB.unsuccessfulbuild" удаляется.
+         Обращение к "Debug\OpenComunicationModule_WinUSB.lastbuildstate".
+     1>Построение проекта "D:\GitHubAndGitlab\OpenComunicationModule\src\win32\WinUSB version\OpenComunicationModule_WinUSB\OpenComunicationModule_WinUSB.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:02.79
