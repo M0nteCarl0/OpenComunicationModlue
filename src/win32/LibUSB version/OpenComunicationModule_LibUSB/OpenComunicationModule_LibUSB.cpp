@@ -23,8 +23,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		return r;
 
    handle =  libusb_open_device_with_vid_pid(Contex,0x63,0x5);
-   libusb_
-
+ 
    libusb_close(handle);
 
 	
