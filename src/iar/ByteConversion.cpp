@@ -288,7 +288,7 @@ void Conversion::Unsigned7bitFormaTotSigned64Bit(
                   (int64_t)Buff[5] << 40 | (int64_t)Buff[6] << 48 |
                   (int64_t)Buff[7] << 56;
 }
-/***************************************************************************/
+
 void Conversion::UnsignedBuffer32BitToUnsigned8bitFormatBuffer(
     uint32_t *SourceBuffer, uint32_t SourceSizeBuffer, uint8_t *OutputBuffer,
     uint32_t OutpuSizeBuffer) {
@@ -304,7 +304,7 @@ void Conversion::UnsignedBuffer32BitToUnsigned8bitFormatBuffer(
     DestinationBuffer += 4;
   }
 }
-/***************************************************************************/
+
 void Conversion::Unsigned8bitFormatBufferToUnsignedBuffer32Bit(
     uint8_t *SourceBuffer, uint32_t SourceSizeBuffer, uint32_t *OutputBuffer,
     uint32_t OutpuSizeBuffer) {
@@ -318,4 +318,4 @@ void Conversion::Unsigned8bitFormatBufferToUnsignedBuffer32Bit(
     DestinationBuffer += 4;
   }
 }
-/***************************************************************************/
+

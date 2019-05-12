@@ -39,6 +39,7 @@ uint16_t FlashIO ::GetSectorID(u32 Addres) {
 END:
   return SectorBegin[SectorIndex];
 }
+
 void FlashIO ::SetVoltageRange(uint8_t VoltageRange) {
   _VoltageRange = VoltageRange;
 };
