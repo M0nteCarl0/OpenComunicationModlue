@@ -7,6 +7,10 @@
 ![GitHub forks](https://img.shields.io/github/forks/M0nteCarl0/OpenComunicationModule.svg?label=Fork&style=flat-square)
 ![GitHub watchers](https://img.shields.io/github/watchers/M0nteCarl0/OpenComunicationModule.svg?label=watch&style=flat-square)
 
+**FW & SW debug info**
+ * FW [tested on STM32F4 Discovery](https://www.st.com/en/evaluation-tools/stm32f4discovery.html) + [WaveShare Open407V-D Package B](https://www.waveshare.com/wiki/Open407V-D)
+ * SW part tested on Windows 10 OS
+
 **Features SW Part:**
 
 * Read/Write via Bulk EP.
